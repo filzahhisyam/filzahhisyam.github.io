@@ -4,15 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comm.byte VocabVault</title>
+  <style>
+    /* Set background gradient */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ADD8E6, #48D1CC);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Center and style heading */
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 10px;
+    }
+
+    /* Button group styling */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px; /* Add space between title and buttons */
+    }
+
+    /* Button styling */
+    .button {
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #5F9EA0;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* Button hover effect */
+    .button:hover {
+      background-color: #4682B4;
+      transform: scale(1.05);
+    }
+
+    /* Footer styling */
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      color: #ffffffcc; /* Slightly transparent white */
+    }
+  </style>
 </head>
 <body>
   <h1>Welcome to Comm.byte VocabVault</h1>
   <div id="bp-web-widget"></div>
 
+  <!-- Buttons to External Websites -->
+  <div class="button-group">
+    <a href="https://petronas.sharepoint.com/sites/commercialbyte" target="_blank" class="button">Visit Comm.byte</a>
+    <a href="https://petronas.sharepoint.com/sites/upstreamcommercialac" target="_blank" class="button">Visit UCA site</a>
+  </div>
+
+  <!-- Footer with message -->
+  <footer>
+    Click the widget at the bottom right to interact with the chatbot.
+  </footer>
+
   <!-- Embed Botpress Webchat -->
-  
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/10/10/07/20241010070326-VE30CFS1.js"></script>
-    
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/10/07/20241010070326-VE30CFS1.js"></script>
 </body>
 </html>
