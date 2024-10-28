@@ -26,6 +26,13 @@
       padding: 10px;
     }
 
+    /* Style for subheading/message text */
+    .message {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #ffffffcc; /* Slightly transparent white */
+    }
+
     /* Button group styling */
     .button-group {
       display: flex;
@@ -50,35 +57,31 @@
       background-color: #4682B4;
       transform: scale(1.05);
     }
-
-    /* Footer styling */
-    footer {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 1rem;
-      color: #ffffffcc; /* Slightly transparent white */
-    }
   </style>
 </head>
 <body>
   <h1>Welcome to Comm.byte VocabVault</h1>
-  <div id="bp-web-widget"></div>
-
+  <p class="message">Click the widget at the bottom right to interact with the chatbot.</p>
+  
   <!-- Buttons to External Websites -->
   <div class="button-group">
     <a href="https://petronas.sharepoint.com/sites/commercialbyte" target="_blank" class="button">Visit Comm.byte</a>
     <a href="https://petronas.sharepoint.com/sites/upstreamcommercialac" target="_blank" class="button">Visit UCA site</a>
   </div>
 
-  <!-- Footer with message -->
-  <footer>
-    Click the widget at the bottom right to interact with the chatbot.
-  </footer>
-
   <!-- Embed Botpress Webchat -->
   <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
   <script src="https://files.bpcontent.cloud/2024/10/10/07/20241010070326-VE30CFS1.js"></script>
+
+  <!-- Script to auto-open the chatbot -->
+  <script>
+    // Wait for the Botpress webchat script to load
+    window.botpressWebChat.init({
+      onLoad: function() {
+        // Open the chatbot automatically on page load
+        window.botpressWebChat.sendEvent({ type: 'show' });
+      }
+    });
+  </script>
 </body>
 </html>
